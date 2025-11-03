@@ -1,19 +1,10 @@
+import { JSX } from "react";
 import NavItem from "./NavItem";
+import { NAV_ITEMS } from "@/utils/navItems";
 
-const navItems = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About Me",
-    href: "/about",
-  },
-];
-
-const NavBar = () => (
+const NavBar = (): JSX.Element => (
   <nav>
-    {navItems.map((item) => (
+    {NAV_ITEMS.map((item) => (
       <NavItem {...item} key={item.name} />
     ))}
   </nav>
