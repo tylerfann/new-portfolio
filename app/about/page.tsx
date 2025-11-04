@@ -1,11 +1,4 @@
-import Image from "next/image";
 
-export default function About() {
-  return (
-    <div>
-      <main>
-        abouttt
-      </main>
-    </div>
-  );
-}
+const About = () => <div>about</div>
+
+export default About;

@@ -1,11 +1,4 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div>
-      <main>
-        tyler fann
-      </main>
-    </div>
-  );
-}
+const Home = () => <div>Home</div>
+
+export default Home;
