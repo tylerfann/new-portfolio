@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavItem as NavItemType } from "@/types/navItem";
+import type { NavItemType } from "@/types/NavItemType";
 import { JSX } from "react";
 
 const NavItem = ({ name, href }: NavItemType): JSX.Element => (
