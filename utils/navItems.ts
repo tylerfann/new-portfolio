@@ -17,12 +17,13 @@ export const NAV_ITEMS: NavItemType[] = [
       name: "Skills",
       href: "/skills",
     },
-    {
-      name: "Projects",
-      href: "/projects",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
+    // Add these after i get the above done
+    // {
+    //   name: "Projects",
+    //   href: "/projects",
+    // },
+    // {
+    //   name: "Contact",
+    //   href: "/contact",
+    // },
   ];

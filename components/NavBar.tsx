@@ -3,7 +3,7 @@ import NavItem from "./NavItem";
 import { NAV_ITEMS } from "@/utils/navItems";
 
 const NavBar = (): JSX.Element => (
-  <nav>
+  <nav className="flex">
     {NAV_ITEMS.map((item) => (
       <NavItem {...item} key={item.name} />
     ))}
