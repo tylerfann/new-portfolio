@@ -11,7 +11,7 @@ const NavItem = ({ name, href }: NavItemType): JSX.Element => {
   const isActive = pathname === href;
 
   return (
-    <Link href={href} className="mr-10"><span className={clsx("text-lg", isActive && "text-lime-500")}>{name}</span></Link>
+    <Link href={href} className="mr-10"><span className={clsx("text-lg")}>{name}</span></Link>
   );
 };
 

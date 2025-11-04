@@ -6,24 +6,11 @@ export const NAV_ITEMS: NavItemType[] = [
       href: "/",
     },
     {
-      name: "About",
-      href: "/about",
-    },
-    {
       name: "Experience",
       href: "/experience",
     },
     {
-      name: "Skills",
-      href: "/skills",
-    },
-    // Add these after i get the above done
-    // {
-    //   name: "Projects",
-    //   href: "/projects",
-    // },
-    // {
-    //   name: "Contact",
-    //   href: "/contact",
-    // },
+      name: 'Contact',
+      href: "mailto:ty.fann95@gmail.com",
+    }
   ];
