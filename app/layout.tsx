@@ -7,6 +7,7 @@
 // });
 import ThemeRegistry from './ThemeRegistry';
 import { Button, Container, Typography, Box } from '@mui/material';
+import Header from './new-components/Header';
 
 export default function RootLayout({
   children,
@@ -19,7 +20,12 @@ export default function RootLayout({
       {/* <script src="https://kit.fontawesome.com/30783d8b54.js" crossOrigin="anonymous"></script> */}
       </head>
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <Box>
+            <Header />
+            {children}
+          </Box>
+        </ThemeRegistry>
       </body>
       {/* <body className={`p-10 ${lato.className}`}>
         <div className="flex justify-center">
