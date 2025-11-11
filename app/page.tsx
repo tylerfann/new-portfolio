@@ -52,6 +52,27 @@ import {
   CardContent,
 } from "@mui/material";
 import Image from "next/image";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DescriptionIcon from "@mui/icons-material/Description";
+
+const BUTTONS = [
+  {
+    name: "LinkedIn Profile",
+    icon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/in/tylerfann/",
+  },
+  {
+    name: "GitHub Portfolio",
+    icon: <GitHubIcon />,
+    href: "https://github.com/tylerfann",
+  },
+  {
+    name: "View Resume",
+    icon: <DescriptionIcon />,
+    href: "/tyler-fann-resume.pdf",
+  },
+];
 
 export default function Home() {
   return (
@@ -119,21 +140,27 @@ export default function Home() {
             </Typography>
           </CardContent>
         </Card>
-        {/* <Box> */}
-          <Typography
-            sx={{
-              fontSize: 24,
-              fontWeight: "bold",
-            }}
-          >
-            Connect With Me
-          </Typography>
-          {["LinkedIn Profile", "GitHub Portfolio", "View Resume"].map(
-            (item) => {
-              return <Button variant="outlined">{item}</Button>;
-            }
-          )}
-        {/* </Box> */}
+        <Typography
+          sx={{
+            fontSize: 24,
+            fontWeight: "bold",
+          }}
+        >
+          Connect With Me
+        </Typography>
+        {BUTTONS.map(({ name, icon, href }) => {
+          return (
+            <Button
+              rel="noopener noreferrer"
+              target="_blank"
+              href={href}
+              startIcon={icon}
+              variant="outlined"
+            >
+              {name}
+            </Button>
+          );
+        })}
       </Stack>
     </Container>
   );
