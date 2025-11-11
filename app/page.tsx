@@ -40,25 +40,101 @@
 
 // export default Home;
 
-'use client';
-
-import * as React from 'react';
-import { Button, Container, Typography, Box } from '@mui/material';
+"use client";
+import {
+  Button,
+  Container,
+  Typography,
+  Box,
+  Stack,
+  Card,
+  CardHeader,
+  CardContent,
+} from "@mui/material";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <Container sx={{ mt: 8, textAlign: 'center' }}>
-      <Typography variant="h3" gutterBottom>
-        Welcome to My Portfolio
-      </Typography>
-      <Typography variant="body1" color="text.secondary">
-        This site is built with Next.js and MUI.
-      </Typography>
-      <Box sx={{ mt: 3 }}>
-        <Button variant="contained" color="primary">
-          View My Projects
-        </Button>
-      </Box>
+    <Container
+      sx={{
+        mt: 5,
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+    >
+      <Stack spacing={2}>
+        <Image
+          src="/profile-pic.png"
+          alt="Headshot picture"
+          width={125}
+          height={125}
+          style={{ alignSelf: "center" }}
+        />
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: 50,
+            fontWeight: "bold",
+          }}
+        >
+          Tyler Fann
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: 26,
+          }}
+        >
+          Front End Engineer
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: 18,
+          }}
+        >
+          Building seamless digital experiences with a passion for clean code
+          and impactful design.
+        </Typography>
+        <Card variant="outlined">
+          <CardHeader
+            title="About Me"
+            sx={{
+              "& .MuiCardHeader-title": {
+                fontWeight: "bold",
+              },
+            }}
+          />
+          <CardContent
+            sx={{
+              textAlign: "left",
+            }}
+          >
+            <Typography>
+              Software engineer with 6+ years of experience building and
+              enhancing web applications using React, TypeScript, and other
+              modern technologies. After briefly pursuing a personal aspiration
+              outside of technology, I’ve decided to return to software
+              engineering with renewed passion and perspective on teamwork and
+              service.
+            </Typography>
+          </CardContent>
+        </Card>
+        {/* <Box> */}
+          <Typography
+            sx={{
+              fontSize: 24,
+              fontWeight: "bold",
+            }}
+          >
+            Connect With Me
+          </Typography>
+          {["LinkedIn Profile", "GitHub Portfolio", "View Resume"].map(
+            (item) => {
+              return <Button variant="outlined">{item}</Button>;
+            }
+          )}
+        {/* </Box> */}
+      </Stack>
     </Container>
   );
 }
